@@ -1,5 +1,21 @@
 # http
 封装Retrofit Rxjava.okhttp网络请求及文件下载。
+
+   dependencies {
+	        implementation 'com.github.sailorr:http:v1.0'
+   }
+   
+	allprojects {
+		repositories {
+			...
+			maven { url 'https://www.jitpack.io' }
+		}
+	} 
+   
+   
+
+  
+   
 包括get post down
 
 1.http 使用
