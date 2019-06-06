@@ -3,6 +3,7 @@
 包括get post down
 
 1.http 使用
+
    HttpManager.getInstance().GET("www.baidu.com", String.class, new HttpCallback() {
             @Override
             public void onSuccess(Object body) {
@@ -19,8 +20,12 @@
 
             }
         });
+        
 2.Retrofit使用
-  初始化 最好在application进行：RetrofitManager.getInstance().init(Api.BASE_URl);
+  初始化 最好在application进行：
+  
+  RetrofitManager.getInstance().init(Api.BASE_URl);
+  
      RetrofitManager.getInstance().getServer(Api.class)
                 .getBaidu()
                 .subscribeOn(Schedulers.io())
@@ -31,7 +36,9 @@
                         Log.d("MainActivity", "accept: " + responseBody.string());
                     }
                 });
+                
     下载
+    
     RetrofitManager.getInstance().getServer(Api.class)
                 .downBaidu()
                 .subscribeOn(Schedulers.io())
