@@ -4,11 +4,14 @@
 
 1.http 使用
 
+
    HttpManager.getInstance().GET(url, String.class, new HttpCallback() {
+   
             @Override
             public void onSuccess(Object body) {
                 Log.d("MainActivity", "onSuccess: " + body.toString());
             }
+            
             @Override
             public void onFail(int responseCode) {
 
