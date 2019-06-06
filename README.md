@@ -4,20 +4,17 @@
 
 1.http 使用
 
-   HttpManager.getInstance().GET("www.baidu.com", String.class, new HttpCallback() {
+   HttpManager.getInstance().GET(url, String.class, new HttpCallback() {
             @Override
             public void onSuccess(Object body) {
                 Log.d("MainActivity", "onSuccess: " + body.toString());
             }
-
             @Override
             public void onFail(int responseCode) {
 
             }
-
             @Override
             public void onError(Exception e) {
-
             }
         });
         
